@@ -8,7 +8,8 @@ gsap.registerPlugin(ScrollTrigger);
 const platforms = [
   {
     name: "Instagram",
-    handle: "@threesisters.ksa",
+    handle: "@three_sisters_ksa",
+    url: "https://www.instagram.com/three_sisters_ksa/",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" width="32" height="32">
         <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
@@ -18,27 +19,9 @@ const platforms = [
     ),
   },
   {
-    name: "TikTok",
-    handle: "@threesisters.ksa",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="currentColor" width="32" height="32">
-        <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.32 6.32 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.77 1.52V6.75a4.85 4.85 0 0 1-1-.06z"/>
-      </svg>
-    ),
-  },
-  {
-    name: "LinkedIn",
-    handle: "Three Sisters KSA",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="currentColor" width="32" height="32">
-        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/>
-        <circle cx="4" cy="4" r="2"/>
-      </svg>
-    ),
-  },
-  {
     name: "Behance",
-    handle: "Three Sisters KSA",
+    handle: "three_sisters_ksa",
+    url: "https://www.behance.net/three_sisters_ksa",
     icon: (
       <svg viewBox="0 0 24 24" fill="currentColor" width="32" height="32">
         <path d="M22 7h-7V5h7v2zm1.726 10c-.442 1.297-2.029 3-5.101 3-3.074 0-5.564-1.729-5.564-5.675 0-3.91 2.325-5.92 5.466-5.92 3.082 0 4.964 1.782 5.375 4.426.078.506.109 1.188.095 2.14H15.97c.13 3.211 3.483 3.312 4.588 2.029H23.7zM15.97 13h5.734c-.317-1.385-1.326-2.062-2.877-2.062-1.575 0-2.58.694-2.857 2.062zM3 6l2.443 3.759a1.504 1.504 0 0 1 0 1.584L3 15.006h3.147l1.777-2.74.005-.007 1.778 2.747H13L10.557 11.3a1.504 1.504 0 0 1 0-1.584L13 6H9.707L7.929 8.747 6.152 6H3z"/>
@@ -135,9 +118,12 @@ export function SocialMedia() {
           }}
         >
           {platforms.map((p, i) => (
-            <div
+            <a
               key={i}
-              ref={el => { cardRefs.current[i] = el; }}
+              href={p.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              ref={el => { cardRefs.current[i] = el as HTMLDivElement; }}
               style={{
                 opacity: 0,
                 background: "#050505",
@@ -148,6 +134,7 @@ export function SocialMedia() {
                 display: "flex",
                 flexDirection: "column",
                 gap: "1.5rem",
+                textDecoration: "none",
               }}
               onMouseEnter={e => {
                 const el = e.currentTarget as HTMLElement;
@@ -198,7 +185,7 @@ export function SocialMedia() {
                   {p.handle}
                 </div>
               </div>
-            </div>
+            </a>
           ))}
         </div>
       </div>

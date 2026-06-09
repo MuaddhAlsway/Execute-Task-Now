@@ -141,22 +141,28 @@ export function Footer({ onScrollTo, onStartProject }: FooterProps) {
                 {t("Social", "تواصل")}
               </div>
               <div style={{ display: "flex", flexDirection: "column", gap: "0.8rem" }}>
-                {["Instagram", "TikTok", "LinkedIn", "Behance"].map((s) => (
-                  <span
-                    key={s}
+                {[
+                  { label: "Instagram", url: "https://www.instagram.com/three_sisters_ksa/" },
+                  { label: "Behance", url: "https://www.behance.net/three_sisters_ksa" },
+                ].map((s) => (
+                  <a
+                    key={s.label}
+                    href={s.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     style={{
                       fontFamily: "'DM Sans', sans-serif",
                       fontSize: "0.875rem",
                       fontWeight: 300,
                       color: "rgba(255,255,255,0.4)",
-                      cursor: "pointer",
+                      textDecoration: "none",
                       transition: "color 0.2s",
                     }}
                     onMouseEnter={e => (e.currentTarget.style.color = "#fb6491")}
                     onMouseLeave={e => (e.currentTarget.style.color = "rgba(255,255,255,0.4)")}
                   >
-                    {s}
-                  </span>
+                    {s.label}
+                  </a>
                 ))}
               </div>
             </div>

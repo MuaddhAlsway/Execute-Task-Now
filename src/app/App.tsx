@@ -35,7 +35,7 @@ const globalStyles = `
   input, textarea, select { color-scheme: dark; }
 `;
 
-const WA = "https://wa.me/966560394576";
+const WA = "https://wa.me/966553254299";
 
 function HomePage() {
   const scrollTo = (section: string) => {

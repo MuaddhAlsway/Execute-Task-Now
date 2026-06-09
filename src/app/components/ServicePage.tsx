@@ -3,7 +3,7 @@ import { useParams, useNavigate } from "react-router";
 import gsap from "gsap";
 import { useLang } from "./LanguageContext";
 
-const WA = "https://wa.me/966560394576";
+const WA = "https://wa.me/966553254299";
 const PINK = "#fb6491";
 
 const serviceData = {
