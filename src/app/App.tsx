@@ -12,6 +12,7 @@ import { CTASection } from "./components/CTASection";
 import { Footer } from "./components/Footer";
 import { AdminPanel } from "./components/AdminPanel";
 import { ServicePage } from "./components/ServicePage";
+import { ScrollToTop } from "./components/ScrollToTop";
 
 const globalStyles = `
   * { box-sizing: border-box; }
@@ -79,6 +80,7 @@ function ServicePageWrapper() {
 export default function App() {
   return (
     <LanguageProvider>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/services/:slug" element={<ServicePageWrapper />} />
