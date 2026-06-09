@@ -1,5 +1,5 @@
 import "../styles/fonts.css";
-import { Routes, Route } from "react-router";
+import { Routes, Route, useNavigate } from "react-router";
 import { LanguageProvider } from "./components/LanguageContext";
 import { Navbar } from "./components/Navbar";
 import { Hero } from "./components/Hero";
@@ -11,6 +11,7 @@ import { MarqueeText } from "./components/MarqueeText";
 import { CTASection } from "./components/CTASection";
 import { Footer } from "./components/Footer";
 import { AdminPanel } from "./components/AdminPanel";
+import { ServicePage } from "./components/ServicePage";
 
 const globalStyles = `
   * { box-sizing: border-box; }
@@ -57,11 +58,30 @@ function HomePage() {
   );
 }
 
+function ServicePageWrapper() {
+  const navigate = useNavigate();
+  const scrollTo = (section: string) => {
+    navigate("/");
+    setTimeout(() => {
+      const el = document.getElementById(section);
+      if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 100);
+  };
+  return (
+    <div style={{ background: "#000", minHeight: "100vh", fontFamily: "'DM Sans', sans-serif", overflowX: "hidden" }}>
+      <Navbar onStartProject={() => window.open(WA, "_blank")} onScrollTo={scrollTo} />
+      <ServicePage />
+      <style>{globalStyles}</style>
+    </div>
+  );
+}
+
 export default function App() {
   return (
     <LanguageProvider>
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/services/:slug" element={<ServicePageWrapper />} />
         <Route path="/admin" element={<AdminPanel />} />
       </Routes>
     </LanguageProvider>

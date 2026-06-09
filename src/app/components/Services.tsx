@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import { useNavigate } from "react-router";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useLang } from "./LanguageContext";
@@ -12,6 +13,7 @@ const services = [
     descEn: "Crafting your digital persona with precision and elegance.",
     descAr: "صياغة هويتك الرقمية بدقة وأناقة.",
     num: "01",
+    slug: "profile-design",
   },
   {
     en: "Visual Identity",
@@ -19,6 +21,7 @@ const services = [
     descEn: "Building brands that endure through impeccable design systems.",
     descAr: "بناء علامات تجارية راسخة من خلال أنظمة تصميم لا تُضاهى.",
     num: "02",
+    slug: "visual-identity",
   },
   {
     en: "Websites",
@@ -26,6 +29,7 @@ const services = [
     descEn: "Digital experiences engineered for impact and conversion.",
     descAr: "تجارب رقمية مصممة للتأثير والتحويل.",
     num: "03",
+    slug: "websites",
   },
   {
     en: "Social Media Management",
@@ -33,11 +37,13 @@ const services = [
     descEn: "Strategic content that builds community and drives growth.",
     descAr: "محتوى استراتيجي يبني مجتمعاً ويحقق نمواً.",
     num: "04",
+    slug: "social-media-management",
   },
 ];
 
 export function Services() {
   const { isAr, t } = useLang();
+  const navigate = useNavigate();
   const sectionRef = useRef<HTMLElement>(null);
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
 
@@ -128,12 +134,13 @@ export function Services() {
             <div
               key={i}
               ref={el => { cardRefs.current[i] = el; }}
+              onClick={() => navigate(`/services/${service.slug}`)}
               style={{
                 opacity: 0,
                 background: "#050505",
                 border: "1px solid rgba(255,255,255,0.05)",
                 padding: "48px 36px",
-                cursor: "default",
+                cursor: "pointer",
                 position: "relative",
                 overflow: "hidden",
                 transition: "all 0.4s cubic-bezier(0.4,0,0.2,1)",
