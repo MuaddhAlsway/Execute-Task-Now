@@ -15,22 +15,8 @@ const serviceData = {
     taglineAr: "صياغة هويتك الرقمية بدقة وأناقة.",
     descEn: "Your profile is your first impression — and in today's world, it needs to stop the scroll. We design social media profiles, LinkedIn presences, and personal brand visuals that communicate authority, taste, and personality in a single glance.",
     descAr: "ملفك الشخصي هو انطباعك الأول — وفي عالم اليوم، يجب أن يوقف التمرير. نصمم ملفات تعريفية لوسائل التواصل الاجتماعي وحضور LinkedIn ومرئيات العلامة التجارية الشخصية التي تنقل السلطة والذوق والشخصية في لمحة واحدة.",
-    whatEn: [
-      "Instagram & LinkedIn profile visuals",
-      "Bio & highlights covers",
-      "Profile photo direction & retouching",
-      "Personal brand color palette",
-      "Typography & font system",
-      "Digital business card design",
-    ],
-    whatAr: [
-      "مرئيات ملف إنستغرام ولينكدإن",
-      "أغلفة الهايلايت والبيو",
-      "توجيه صورة الملف الشخصي وتعديلها",
-      "لوحة ألوان العلامة التجارية الشخصية",
-      "نظام الطباعة والخطوط",
-      "تصميم بطاقة أعمال رقمية",
-    ],
+    whatEn: ["Instagram & LinkedIn profile visuals","Bio & highlights covers","Profile photo direction & retouching","Personal brand color palette","Typography & font system","Digital business card design"],
+    whatAr: ["مرئيات ملف إنستغرام ولينكدإن","أغلفة الهايلايت والبيو","توجيه صورة الملف الشخصي وتعديلها","لوحة ألوان العلامة التجارية الشخصية","نظام الطباعة والخطوط","تصميم بطاقة أعمال رقمية"],
     processEn: [
       { step: "01", title: "Discovery", desc: "We learn your personality, goals, and target audience." },
       { step: "02", title: "Concept", desc: "Two visual directions crafted for your review." },
@@ -52,22 +38,8 @@ const serviceData = {
     taglineAr: "بناء علامات تجارية راسخة من خلال أنظمة تصميم لا تُضاهى.",
     descEn: "A visual identity is the foundation of every successful brand. We design comprehensive brand systems — from logo and color to typography and brand guidelines — that communicate your values instantly and consistently across every touchpoint.",
     descAr: "الهوية البصرية هي أساس كل علامة تجارية ناجحة. نصمم أنظمة علامات تجارية شاملة — من الشعار واللون إلى الطباعة وإرشادات العلامة التجارية — تنقل قيمك فوراً وباتساق عبر كل نقطة تواصل.",
-    whatEn: [
-      "Logo design (primary + variants)",
-      "Brand color palette & usage rules",
-      "Typography system",
-      "Brand guidelines document",
-      "Business stationery design",
-      "Brand pattern & iconography",
-    ],
-    whatAr: [
-      "تصميم الشعار (أساسي + متغيرات)",
-      "لوحة ألوان العلامة التجارية وقواعد الاستخدام",
-      "نظام الطباعة",
-      "وثيقة إرشادات العلامة التجارية",
-      "تصميم القرطاسية التجارية",
-      "نمط العلامة التجارية والأيقونات",
-    ],
+    whatEn: ["Logo design (primary + variants)","Brand color palette & usage rules","Typography system","Brand guidelines document","Business stationery design","Brand pattern & iconography"],
+    whatAr: ["تصميم الشعار (أساسي + متغيرات)","لوحة ألوان العلامة التجارية وقواعد الاستخدام","نظام الطباعة","وثيقة إرشادات العلامة التجارية","تصميم القرطاسية التجارية","نمط العلامة التجارية والأيقونات"],
     processEn: [
       { step: "01", title: "Brand Audit", desc: "We analyze your market, competitors, and brand positioning." },
       { step: "02", title: "Strategy", desc: "Define brand personality, values, and visual direction." },
@@ -89,22 +61,8 @@ const serviceData = {
     taglineAr: "تجارب رقمية مصممة للتأثير والتحويل.",
     descEn: "We build websites that work as hard as you do. From sleek portfolio sites to high-converting landing pages and full brand websites — every pixel is intentional, every interaction purposeful, and every second of load time accounted for.",
     descAr: "نبني مواقع تعمل بنفس جدك واجتهادك. من مواقع المحافظ الأنيقة إلى صفحات الهبوط عالية التحويل والمواقع الكاملة للعلامة التجارية — كل بكسل مقصود، وكل تفاعل هادف، وكل ثانية من وقت التحميل محسوبة.",
-    whatEn: [
-      "Brand website design & development",
-      "Landing page design",
-      "Portfolio & showcase sites",
-      "Mobile-first responsive design",
-      "SEO-ready structure",
-      "CMS integration (if needed)",
-    ],
-    whatAr: [
-      "تصميم وتطوير موقع العلامة التجارية",
-      "تصميم صفحة الهبوط",
-      "مواقع المحافظ والعرض",
-      "تصميم متجاوب يُعطي الأولوية للجوال",
-      "هيكل جاهز لمحركات البحث",
-      "تكامل نظام إدارة المحتوى (عند الحاجة)",
-    ],
+    whatEn: ["Brand website design & development","Landing page design","Portfolio & showcase sites","Mobile-first responsive design","SEO-ready structure","CMS integration (if needed)"],
+    whatAr: ["تصميم وتطوير موقع العلامة التجارية","تصميم صفحة الهبوط","مواقع المحافظ والعرض","تصميم متجاوب يُعطي الأولوية للجوال","هيكل جاهز لمحركات البحث","تكامل نظام إدارة المحتوى (عند الحاجة)"],
     processEn: [
       { step: "01", title: "Discovery", desc: "Goals, audience, and content architecture defined." },
       { step: "02", title: "Wireframe", desc: "Layout and user flow mapped before any design begins." },
@@ -126,22 +84,8 @@ const serviceData = {
     taglineAr: "محتوى استراتيجي يبني مجتمعاً ويحقق نمواً.",
     descEn: "Consistency is the secret to social media success. We manage your accounts end-to-end — from content strategy and copywriting to design, scheduling, and analytics — so you show up professionally every single day without lifting a finger.",
     descAr: "الاتساق هو سر النجاح في وسائل التواصل الاجتماعي. ندير حساباتك من البداية إلى النهاية — من استراتيجية المحتوى والكتابة الإبداعية إلى التصميم والجدولة والتحليلات — حتى تظهر باحترافية كل يوم دون أن ترفع إصبعاً.",
-    whatEn: [
-      "Monthly content strategy",
-      "Post design & copywriting",
-      "Content calendar & scheduling",
-      "Stories & reels creative direction",
-      "Community management & replies",
-      "Monthly performance report",
-    ],
-    whatAr: [
-      "استراتيجية محتوى شهرية",
-      "تصميم المنشورات والكتابة الإبداعية",
-      "تقويم المحتوى والجدولة",
-      "التوجيه الإبداعي للستوري والريلز",
-      "إدارة المجتمع والردود",
-      "تقرير الأداء الشهري",
-    ],
+    whatEn: ["Monthly content strategy","Post design & copywriting","Content calendar & scheduling","Stories & reels creative direction","Community management & replies","Monthly performance report"],
+    whatAr: ["استراتيجية محتوى شهرية","تصميم المنشورات والكتابة الإبداعية","تقويم المحتوى والجدولة","التوجيه الإبداعي للستوري والريلز","إدارة المجتمع والردود","تقرير الأداء الشهري"],
     processEn: [
       { step: "01", title: "Onboarding", desc: "Brand voice, tone, and content pillars established." },
       { step: "02", title: "Strategy", desc: "Monthly content plan reviewed and approved by you." },
@@ -196,26 +140,21 @@ export function ServicePage() {
   const what = isAr ? service.whatAr : service.whatEn;
 
   return (
-    <div style={{ background: "#000", minHeight: "100vh", fontFamily: "'DM Sans', sans-serif", direction: isAr ? "rtl" : "ltr" }}>
+    <div style={{ background: "#000", minHeight: "100vh", fontFamily: "'DM Sans', sans-serif", direction: isAr ? "rtl" : "ltr", overflowX: "hidden" }}>
 
       {/* Hero */}
       <div
         ref={heroRef}
         style={{
-          padding: "160px 48px 100px",
+          padding: "clamp(100px, 15vw, 160px) clamp(20px, 5vw, 48px) clamp(48px, 8vw, 100px)",
           maxWidth: "1200px",
           margin: "0 auto",
-          position: "relative",
         }}
       >
         {/* Back button */}
         <button
           onClick={() => navigate("/")}
           style={{
-            position: "absolute",
-            top: "80px",
-            left: isAr ? "auto" : "48px",
-            right: isAr ? "48px" : "auto",
             background: "none",
             border: "1px solid rgba(255,255,255,0.1)",
             color: "rgba(255,255,255,0.4)",
@@ -226,9 +165,10 @@ export function ServicePage() {
             letterSpacing: "0.15em",
             textTransform: "uppercase",
             transition: "all 0.2s",
-            display: "flex",
+            display: "inline-flex",
             alignItems: "center",
             gap: "8px",
+            marginBottom: "clamp(24px, 4vw, 48px)",
           }}
           onMouseEnter={e => {
             (e.currentTarget as HTMLElement).style.color = PINK;
@@ -246,93 +186,119 @@ export function ServicePage() {
           {service.num} / {t("Our Services", "خدماتنا")}
         </div>
 
-        <h1
-          style={{
-            fontFamily: isAr ? "'Cairo', sans-serif" : "'Barlow Condensed', sans-serif",
-            fontWeight: 900,
-            fontSize: "clamp(3.5rem, 9vw, 9rem)",
-            lineHeight: isAr ? 1.2 : 0.95,
-            letterSpacing: isAr ? "0" : "-0.03em",
-            textTransform: isAr ? "none" : "uppercase",
-            color: "#fff",
-            margin: "0 0 1.5rem",
-          }}
-        >
+        <h1 style={{
+          fontFamily: isAr ? "'Cairo', sans-serif" : "'Barlow Condensed', sans-serif",
+          fontWeight: 900,
+          fontSize: "clamp(2.8rem, 9vw, 9rem)",
+          lineHeight: isAr ? 1.2 : 0.95,
+          letterSpacing: isAr ? "0" : "-0.03em",
+          textTransform: isAr ? "none" : "uppercase",
+          color: "#fff",
+          margin: "0 0 1.5rem",
+          wordBreak: "break-word",
+        }}>
           {isAr ? service.ar : service.en}
         </h1>
 
         <p style={{
           fontFamily: isAr ? "'Cairo', sans-serif" : "'DM Sans', sans-serif",
-          fontSize: "clamp(1rem, 2vw, 1.3rem)",
+          fontSize: "clamp(0.95rem, 2vw, 1.3rem)",
           fontWeight: 300,
           color: "rgba(255,255,255,0.45)",
           maxWidth: "580px",
           lineHeight: 1.7,
+          margin: 0,
         }}>
           {isAr ? service.taglineAr : service.taglineEn}
         </p>
       </div>
 
       {/* Pink divider */}
-      <div style={{ height: "1px", background: `linear-gradient(${isAr ? "270deg" : "90deg"}, ${PINK}, transparent)`, margin: "0 48px" }} />
+      <div style={{
+        height: "1px",
+        background: `linear-gradient(${isAr ? "270deg" : "90deg"}, ${PINK}, transparent)`,
+        margin: "0 clamp(20px, 5vw, 48px)",
+      }} />
 
       {/* Content */}
-      <div ref={contentRef} style={{ maxWidth: "1200px", margin: "0 auto", padding: "80px 48px 120px" }}>
+      <div ref={contentRef} style={{ maxWidth: "1200px", margin: "0 auto", padding: "clamp(40px, 6vw, 80px) clamp(20px, 5vw, 48px) clamp(60px, 10vw, 120px)" }}>
 
-        {/* About section */}
-        <div className="reveal" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "80px", marginBottom: "100px", alignItems: "start" }}>
-          <div>
-            <div style={{ fontSize: "0.65rem", letterSpacing: "0.2em", color: PINK, textTransform: "uppercase", marginBottom: "20px" }}>
-              {t("Overview", "نظرة عامة")}
-            </div>
-            <p style={{
-              fontFamily: isAr ? "'Cairo', sans-serif" : "'DM Sans', sans-serif",
-              fontSize: "1.05rem",
-              fontWeight: 300,
-              color: "rgba(255,255,255,0.65)",
-              lineHeight: 1.85,
-            }}>
-              {isAr ? service.descAr : service.descEn}
-            </p>
-          </div>
+        {/* Overview + What's Included — stack on mobile */}
+        <div className="reveal" style={{ marginBottom: "clamp(48px, 8vw, 100px)" }}>
+          <style>{`
+            @media (max-width: 768px) {
+              .sp-two-col { grid-template-columns: 1fr !important; gap: 40px !important; }
+              .sp-border-col { border-left: none !important; border-right: none !important; border-top: 1px solid rgba(255,255,255,0.06) !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 32px !important; }
+              .sp-process-grid { grid-template-columns: 1fr 1fr !important; }
+              .sp-cta { flex-direction: column !important; align-items: flex-start !important; padding: 36px 24px !important; }
+            }
+            @media (max-width: 480px) {
+              .sp-process-grid { grid-template-columns: 1fr !important; }
+            }
+          `}</style>
 
-          {/* What's included */}
-          <div style={{ borderLeft: isAr ? "none" : `1px solid rgba(255,255,255,0.06)`, borderRight: isAr ? `1px solid rgba(255,255,255,0.06)` : "none", paddingLeft: isAr ? "0" : "48px", paddingRight: isAr ? "48px" : "0" }}>
-            <div style={{ fontSize: "0.65rem", letterSpacing: "0.2em", color: PINK, textTransform: "uppercase", marginBottom: "20px" }}>
-              {t("What's Included", "ما يشمله")}
+          <div className="sp-two-col" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "clamp(32px, 5vw, 80px)", alignItems: "start" }}>
+            <div>
+              <div style={{ fontSize: "0.65rem", letterSpacing: "0.2em", color: PINK, textTransform: "uppercase", marginBottom: "20px" }}>
+                {t("Overview", "نظرة عامة")}
+              </div>
+              <p style={{
+                fontFamily: isAr ? "'Cairo', sans-serif" : "'DM Sans', sans-serif",
+                fontSize: "clamp(0.9rem, 1.5vw, 1.05rem)",
+                fontWeight: 300,
+                color: "rgba(255,255,255,0.65)",
+                lineHeight: 1.85,
+                margin: 0,
+              }}>
+                {isAr ? service.descAr : service.descEn}
+              </p>
             </div>
-            <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
-              {what.map((item, i) => (
-                <li key={i} style={{
-                  display: "flex",
-                  alignItems: "flex-start",
-                  gap: "12px",
-                  padding: "12px 0",
-                  borderBottom: "1px solid rgba(255,255,255,0.05)",
-                  fontFamily: isAr ? "'Cairo', sans-serif" : "'DM Sans', sans-serif",
-                  fontSize: "0.9rem",
-                  fontWeight: 300,
-                  color: "rgba(255,255,255,0.65)",
-                }}>
-                  <span style={{ color: PINK, fontSize: "0.6rem", marginTop: "6px", flexShrink: 0 }}>✦</span>
-                  {item}
-                </li>
-              ))}
-            </ul>
+
+            <div
+              className="sp-border-col"
+              style={{
+                borderLeft: isAr ? "none" : "1px solid rgba(255,255,255,0.06)",
+                borderRight: isAr ? "1px solid rgba(255,255,255,0.06)" : "none",
+                paddingLeft: isAr ? "0" : "clamp(20px, 4vw, 48px)",
+                paddingRight: isAr ? "clamp(20px, 4vw, 48px)" : "0",
+              }}
+            >
+              <div style={{ fontSize: "0.65rem", letterSpacing: "0.2em", color: PINK, textTransform: "uppercase", marginBottom: "20px" }}>
+                {t("What's Included", "ما يشمله")}
+              </div>
+              <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
+                {what.map((item, i) => (
+                  <li key={i} style={{
+                    display: "flex",
+                    alignItems: "flex-start",
+                    gap: "12px",
+                    padding: "12px 0",
+                    borderBottom: "1px solid rgba(255,255,255,0.05)",
+                    fontFamily: isAr ? "'Cairo', sans-serif" : "'DM Sans', sans-serif",
+                    fontSize: "clamp(0.82rem, 1.5vw, 0.9rem)",
+                    fontWeight: 300,
+                    color: "rgba(255,255,255,0.65)",
+                  }}>
+                    <span style={{ color: PINK, fontSize: "0.6rem", marginTop: "6px", flexShrink: 0 }}>✦</span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
 
         {/* Process */}
-        <div className="reveal" style={{ marginBottom: "100px" }}>
-          <div style={{ fontSize: "0.65rem", letterSpacing: "0.2em", color: PINK, textTransform: "uppercase", marginBottom: "40px" }}>
+        <div className="reveal" style={{ marginBottom: "clamp(48px, 8vw, 100px)" }}>
+          <div style={{ fontSize: "0.65rem", letterSpacing: "0.2em", color: PINK, textTransform: "uppercase", marginBottom: "clamp(24px, 4vw, 40px)" }}>
             {t("Our Process", "طريقة عملنا")}
           </div>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "2px" }}>
+          <div className="sp-process-grid" style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "2px" }}>
             {process.map((p, i) => (
               <div key={i} style={{
                 background: "#050505",
                 border: "1px solid rgba(255,255,255,0.05)",
-                padding: "36px 28px",
+                padding: "clamp(20px, 3vw, 36px) clamp(16px, 2.5vw, 28px)",
                 position: "relative",
                 overflow: "hidden",
               }}>
@@ -345,23 +311,23 @@ export function ServicePage() {
                   height: "2px",
                   background: PINK,
                 }} />
-                <div style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "2.5rem", fontWeight: 900, color: "rgba(251,100,145,0.12)", lineHeight: 1, marginBottom: "16px" }}>
+                <div style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "clamp(1.8rem, 4vw, 2.5rem)", fontWeight: 900, color: "rgba(251,100,145,0.12)", lineHeight: 1, marginBottom: "12px" }}>
                   {p.step}
                 </div>
                 <div style={{
                   fontFamily: isAr ? "'Cairo', sans-serif" : "'Barlow Condensed', sans-serif",
                   fontWeight: 700,
-                  fontSize: isAr ? "1.1rem" : "1.3rem",
+                  fontSize: isAr ? "clamp(0.9rem, 2vw, 1.1rem)" : "clamp(1rem, 2vw, 1.3rem)",
                   textTransform: isAr ? "none" : "uppercase",
                   color: "#fff",
-                  marginBottom: "10px",
+                  marginBottom: "8px",
                   letterSpacing: isAr ? "0" : "0.02em",
                 }}>
                   {p.title}
                 </div>
                 <p style={{
                   fontFamily: isAr ? "'Cairo', sans-serif" : "'DM Sans', sans-serif",
-                  fontSize: "0.82rem",
+                  fontSize: "clamp(0.75rem, 1.5vw, 0.82rem)",
                   fontWeight: 300,
                   color: "rgba(255,255,255,0.4)",
                   lineHeight: 1.7,
@@ -375,15 +341,15 @@ export function ServicePage() {
         </div>
 
         {/* CTA */}
-        <div className="reveal" style={{
+        <div className="reveal sp-cta" style={{
           background: "#050505",
           border: `1px solid rgba(251,100,145,0.2)`,
-          padding: "64px 56px",
+          padding: "clamp(32px, 5vw, 64px) clamp(24px, 5vw, 56px)",
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
           flexWrap: "wrap",
-          gap: "32px",
+          gap: "28px",
           boxShadow: "0 0 80px rgba(251,100,145,0.06)",
         }}>
           <div>
@@ -393,8 +359,8 @@ export function ServicePage() {
             <h3 style={{
               fontFamily: isAr ? "'Cairo', sans-serif" : "'Barlow Condensed', sans-serif",
               fontWeight: 800,
-              fontSize: isAr ? "2rem" : "3rem",
-              lineHeight: 1,
+              fontSize: isAr ? "clamp(1.5rem, 4vw, 2rem)" : "clamp(1.8rem, 5vw, 3rem)",
+              lineHeight: 1.1,
               letterSpacing: isAr ? "0" : "-0.02em",
               textTransform: isAr ? "none" : "uppercase",
               color: "#fff",
@@ -417,7 +383,7 @@ export function ServicePage() {
               letterSpacing: "0.15em",
               textTransform: "uppercase",
               textDecoration: "none",
-              padding: "20px 48px",
+              padding: "18px clamp(24px, 4vw, 48px)",
               transition: "all 0.3s ease",
               boxShadow: "0 0 40px rgba(251,100,145,0.3)",
               whiteSpace: "nowrap",
@@ -436,11 +402,11 @@ export function ServicePage() {
         </div>
 
         {/* Other services */}
-        <div className="reveal" style={{ marginTop: "80px" }}>
+        <div className="reveal" style={{ marginTop: "clamp(40px, 6vw, 80px)" }}>
           <div style={{ fontSize: "0.65rem", letterSpacing: "0.2em", color: "rgba(255,255,255,0.25)", textTransform: "uppercase", marginBottom: "24px" }}>
             {t("Other Services", "خدمات أخرى")}
           </div>
-          <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
+          <div style={{ display: "flex", gap: "10px", flexWrap: "wrap" }}>
             {Object.entries(serviceData)
               .filter(([key]) => key !== slug)
               .map(([key, s]) => (
@@ -452,10 +418,10 @@ export function ServicePage() {
                     border: "1px solid rgba(255,255,255,0.08)",
                     color: "rgba(255,255,255,0.45)",
                     cursor: "pointer",
-                    padding: "10px 22px",
+                    padding: "10px 18px",
                     fontFamily: isAr ? "'Cairo', sans-serif" : "'DM Sans', sans-serif",
-                    fontSize: "0.8rem",
-                    letterSpacing: "0.08em",
+                    fontSize: "clamp(0.72rem, 1.5vw, 0.8rem)",
+                    letterSpacing: "0.06em",
                     transition: "all 0.2s",
                   }}
                   onMouseEnter={e => {
