@@ -13,6 +13,7 @@ import { Footer } from "./components/Footer";
 import { AdminPanel } from "./components/AdminPanel";
 import { ServicePage } from "./components/ServicePage";
 import { ScrollToTop } from "./components/ScrollToTop";
+import { Cursor } from "./components/Cursor";
 
 const globalStyles = `
   * { box-sizing: border-box; }
@@ -80,6 +81,7 @@ function ServicePageWrapper() {
 export default function App() {
   return (
     <LanguageProvider>
+      <Cursor />
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<HomePage />} />

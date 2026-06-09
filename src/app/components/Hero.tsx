@@ -12,7 +12,7 @@ export function Hero({ onStartProject }: HeroProps) {
   const line1Ref = useRef<HTMLDivElement>(null);
   const line2Ref = useRef<HTMLDivElement>(null);
   const subRef = useRef<HTMLDivElement>(null);
-  const ctaRef = useRef<HTMLButtonElement>(null);
+  const ctaRef = useRef<HTMLDivElement>(null);
   const glowRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -148,39 +148,103 @@ export function Hero({ onStartProject }: HeroProps) {
           )}
         </div>
 
-        <button
+        <div
           ref={ctaRef}
-          onClick={onStartProject}
           style={{
-            fontFamily: isAr ? "'Cairo', sans-serif" : "'DM Sans', sans-serif",
-            fontSize: "0.85rem",
-            fontWeight: 600,
-            letterSpacing: "0.18em",
-            textTransform: "uppercase",
-            color: "#000",
-            background: "#fb6491",
-            border: "none",
-            cursor: "pointer",
-            padding: "18px 44px",
-            position: "relative",
-            overflow: "hidden",
+            display: "flex",
+            alignItems: "center",
+            gap: "16px",
             opacity: 0,
-            transition: "all 0.3s ease",
-            boxShadow: "0 0 40px rgba(251,100,145,0.3)",
-          }}
-          onMouseEnter={e => {
-            const el = e.currentTarget as HTMLElement;
-            el.style.boxShadow = "0 0 60px rgba(251,100,145,0.6)";
-            el.style.transform = "scale(1.04)";
-          }}
-          onMouseLeave={e => {
-            const el = e.currentTarget as HTMLElement;
-            el.style.boxShadow = "0 0 40px rgba(251,100,145,0.3)";
-            el.style.transform = "scale(1)";
+            flexWrap: "wrap",
           }}
         >
-          {t("Start a Project", "ابدأ مشروعك")}
-        </button>
+          <button
+            onClick={onStartProject}
+            style={{
+              fontFamily: isAr ? "'Cairo', sans-serif" : "'DM Sans', sans-serif",
+              fontSize: "0.85rem",
+              fontWeight: 600,
+              letterSpacing: "0.18em",
+              textTransform: "uppercase",
+              color: "#000",
+              background: "#fb6491",
+              border: "none",
+              cursor: "pointer",
+              padding: "18px 44px",
+              position: "relative",
+              overflow: "hidden",
+              transition: "all 0.3s ease",
+              boxShadow: "0 0 40px rgba(251,100,145,0.3)",
+            }}
+            onMouseEnter={e => {
+              const el = e.currentTarget as HTMLElement;
+              el.style.boxShadow = "0 0 60px rgba(251,100,145,0.6)";
+              el.style.transform = "scale(1.04)";
+            }}
+            onMouseLeave={e => {
+              const el = e.currentTarget as HTMLElement;
+              el.style.boxShadow = "0 0 40px rgba(251,100,145,0.3)";
+              el.style.transform = "scale(1)";
+            }}
+          >
+            {t("Start a Project", "ابدأ مشروعك")}
+          </button>
+
+          {/* Divider */}
+          <div style={{ width: "1px", height: "36px", background: "rgba(255,255,255,0.1)" }} />
+
+          {/* Instagram */}
+          <a
+            href="https://www.instagram.com/three_sisters_ksa/"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              color: "rgba(255,255,255,0.35)",
+              transition: "color 0.25s, transform 0.25s",
+              display: "flex",
+              alignItems: "center",
+            }}
+            onMouseEnter={e => {
+              (e.currentTarget as HTMLElement).style.color = "#fb6491";
+              (e.currentTarget as HTMLElement).style.transform = "scale(1.15)";
+            }}
+            onMouseLeave={e => {
+              (e.currentTarget as HTMLElement).style.color = "rgba(255,255,255,0.35)";
+              (e.currentTarget as HTMLElement).style.transform = "scale(1)";
+            }}
+          >
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" width="22" height="22">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+              <circle cx="12" cy="12" r="5"/>
+              <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/>
+            </svg>
+          </a>
+
+          {/* Behance */}
+          <a
+            href="https://www.behance.net/three_sisters_ksa"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              color: "rgba(255,255,255,0.35)",
+              transition: "color 0.25s, transform 0.25s",
+              display: "flex",
+              alignItems: "center",
+            }}
+            onMouseEnter={e => {
+              (e.currentTarget as HTMLElement).style.color = "#fb6491";
+              (e.currentTarget as HTMLElement).style.transform = "scale(1.15)";
+            }}
+            onMouseLeave={e => {
+              (e.currentTarget as HTMLElement).style.color = "rgba(255,255,255,0.35)";
+              (e.currentTarget as HTMLElement).style.transform = "scale(1)";
+            }}
+          >
+            <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22">
+              <path d="M22 7h-7V5h7v2zm1.726 10c-.442 1.297-2.029 3-5.101 3-3.074 0-5.564-1.729-5.564-5.675 0-3.91 2.325-5.92 5.466-5.92 3.082 0 4.964 1.782 5.375 4.426.078.506.109 1.188.095 2.14H15.97c.13 3.211 3.483 3.312 4.588 2.029H23.7zM15.97 13h5.734c-.317-1.385-1.326-2.062-2.877-2.062-1.575 0-2.58.694-2.857 2.062zM3 6l2.443 3.759a1.504 1.504 0 0 1 0 1.584L3 15.006h3.147l1.777-2.74.005-.007 1.778 2.747H13L10.557 11.3a1.504 1.504 0 0 1 0-1.584L13 6H9.707L7.929 8.747 6.152 6H3z"/>
+            </svg>
+          </a>
+        </div>
 
         {/* Scroll hint */}
         <div
