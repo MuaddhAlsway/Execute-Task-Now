@@ -1,24 +1,28 @@
 import { useEffect, useState, useRef } from "react";
 import gsap from "gsap";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
+gsap.registerPlugin(ScrollToPlugin);
 
 export function ScrollToTop() {
   const [visible, setVisible] = useState(false);
   const btnRef = useRef<HTMLButtonElement>(null);
-  const isScrolling = useRef(false);
+  const lastY = useRef(0);
+  const scrollDir = useRef<"up" | "down">("down");
 
+  // ── Track scroll direction + button visibility ─────────────────
   useEffect(() => {
     const onScroll = () => {
-      if (!isScrolling.current) setVisible(window.scrollY > 400);
+      const y = window.scrollY;
+      scrollDir.current = y < lastY.current ? "up" : "down";
+      lastY.current = y;
+      setVisible(y > 400);
     };
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // Fade button in/out
+  // ── Button fade ────────────────────────────────────────────────
   useEffect(() => {
     if (!btnRef.current) return;
     gsap.to(btnRef.current, {
@@ -30,61 +34,67 @@ export function ScrollToTop() {
     });
   }, [visible]);
 
+  // ── IntersectionObserver: animate elements on scroll up ────────
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      // Grab direct children of sections — headlines, paragraphs, cards, buttons
+      const selectors = [
+        "section > div",
+        "section > h1",
+        "section > h2",
+        "section > p",
+        "nav > div",
+        "footer > div",
+      ];
+      const elements = gsap.utils.toArray<HTMLElement>(selectors.join(", "));
+
+      // Store original transforms so we don't break existing GSAP states
+      const observed = new Set<HTMLElement>();
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            const el = entry.target as HTMLElement;
+
+            if (entry.isIntersecting && scrollDir.current === "up") {
+              // Scrolling UP — animate from top (y: -30) coming down into place
+              gsap.fromTo(
+                el,
+                { y: -30, opacity: 0 },
+                { y: 0, opacity: 1, duration: 0.6, ease: "power3.out", overwrite: "auto" }
+              );
+            } else if (entry.isIntersecting && scrollDir.current === "down") {
+              // Scrolling DOWN — normal bottom-up entrance
+              gsap.fromTo(
+                el,
+                { y: 30, opacity: 0 },
+                { y: 0, opacity: 1, duration: 0.6, ease: "power3.out", overwrite: "auto" }
+              );
+            }
+          });
+        },
+        { threshold: 0.1, rootMargin: "0px 0px -40px 0px" }
+      );
+
+      elements.forEach((el) => {
+        if (!observed.has(el)) {
+          observer.observe(el);
+          observed.add(el);
+        }
+      });
+
+      return () => observer.disconnect();
+    }, 600);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  // ── Button click: smooth scroll to top ────────────────────────
   const handleClick = () => {
-    if (isScrolling.current) return;
-    isScrolling.current = true;
-    setVisible(false);
-
-    // Collect all animatable sections/elements on the page
-    const sections = Array.from(
-      document.querySelectorAll<HTMLElement>(
-        "section, nav, footer, [data-scroll-animate]"
-      )
-    ).filter(el => {
-      const rect = el.getBoundingClientRect();
-      // Only elements currently above or near viewport top
-      return rect.bottom > 0;
-    });
-
-    // Sort top to bottom (they'll animate in that order as we scroll up)
-    sections.sort((a, b) => a.getBoundingClientRect().top - b.getBoundingClientRect().top);
-
-    // Step 1: fade out current view
-    gsap.to(sections.slice(0, 3), {
-      opacity: 0,
-      y: 60,
-      duration: 0.3,
-      ease: "power2.in",
-      stagger: 0.04,
-      onComplete: () => {
-        // Step 2: instant jump to top
-        window.scrollTo(0, 0);
-
-        // Step 3: re-collect all sections now visible from top
-        const allSections = Array.from(
-          document.querySelectorAll<HTMLElement>(
-            "section, nav, footer"
-          )
-        );
-
-        // Set all off-screen downward
-        gsap.set(allSections, { opacity: 0, y: -50 });
-
-        // Step 4: animate them top-to-bottom cascading in
-        gsap.to(allSections, {
-          opacity: 1,
-          y: 0,
-          duration: 0.7,
-          ease: "power3.out",
-          stagger: 0.08,
-          onComplete: () => {
-            // Clean up inline styles so normal scroll behavior resumes
-            gsap.set(allSections, { clearProps: "opacity,y,transform" });
-            isScrolling.current = false;
-            setVisible(false);
-          },
-        });
-      },
+    gsap.to(window, {
+      scrollTo: 0,
+      duration: 1.2,
+      ease: "power4.inOut",
     });
   };
 
@@ -110,6 +120,7 @@ export function ScrollToTop() {
         opacity: 0,
         transform: "translateY(16px)",
         boxShadow: "0 0 24px rgba(251,100,145,0.15)",
+        transition: "background 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s",
       }}
       onMouseEnter={e => {
         const el = e.currentTarget as HTMLElement;
